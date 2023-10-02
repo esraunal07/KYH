@@ -1,0 +1,65 @@
+{
+    "Frågeformulär" : [
+        {
+            "fråga" : "Vill du motionera mycket med ditt husdjur?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Bor du i ett stort hus?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Har du mycket fritid" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Har du fjäder allergi?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Gillar du att promenera?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Bor du ensam?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Vaknar du tidigt på morgonen?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Vaknar du tidigt på morgonen?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Gillar du att träna mycket?" ,
+            "svar"  :["ja", "nej"]                                     
+        },
+        {
+            "fråga" : "Vill du ha en lugn och fridfull miljö för det mesta?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Har du någonsin haft husdjur tidigare?" ,
+            "svar"  :["ja", "nej"] 
+        },
+        {
+            "fråga" : "Gillar du att städa?" ,
+            "svar"  :["ja", "nej"]
+        },
+        { 
+            "fråga" : "Skulle du ha något emot om någon kom till dig när du sov på natten?" ,
+            "svar"  :["ja", "nej"]    
+        },
+        {
+            "fråga" : "Vill du köpa en leksak till ditt husdjur?" ,
+            "svar"  :["ja", "nej"]
+        },
+        {
+            "fråga" : "Har du extra budget för ditt husdjur? (veterinär, leksak, etc.)" ,
+            "svar"  :["ja", "nej"]
+        }
+
+    ]
+}

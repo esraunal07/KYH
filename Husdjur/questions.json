@@ -2,107 +2,107 @@
     "questions" : [
     {
         "question": "Är du allergisk mot pälsdjur?",
-        "answers": {
-            "Ja": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 2},
-            "Nej": {"Katt": 2, "Hund": 2, "Kanin": 2, "Fisk": 2}
+        "poäng": {
+            "Ja": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 2},
+            "Nej": {"katt": 2, "hund": 2, "kanin": 2, "fisk": 2}
        }
     },
     {
         "question": "Vill du motionera mycket med ditt husdjur?",
-        "answers": {
-            "Ja": {"Katt": 1, "Hund": 2, "Kanin": 1, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 2}
+        "poäng": {
+            "Ja": {"katt": 1, "hund": 2, "kanin": 1, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 2}
         }
     },
     {
         "question": "Har du tid och lust att gå ut med ditt husdjur flera gånger om dagen?",
-        "answers": {
-            "Ja": {"Katt": 0, "Hund": 2, "Kanin": 0, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 1, "Fisk": 2}
+        "poäng": {
+            "Ja": {"katt": 0, "hund": 2, "kanin": 0, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 1, "fisk": 2}
         }
     },
     {
         "question": "Föredrar du ett tyst husdjur?",
-        "answers": {
-            "Ja": {"Katt": 2, "Hund": 1, "Kanin": 2, "Fisk": 2},
-            "Nej": {"Katt": 0, "Hund": 1, "Kanin": 0, "Fisk": 0}
+        "poäng": {
+            "Ja": {"katt": 2, "hund": 1, "kanin": 2, "fisk": 2},
+            "Nej": {"katt": 0, "hund": 1, "kanin": 0, "fisk": 0}
         }
     },
     {
         "question": "Har du plats för ett större husdjur?",
-        "answers": {
-            "Ja": {"Katt": 0, "Hund": 2, "Kanin": 0, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 1}
+        "poäng": {
+            "Ja": {"katt": 1, "hund": 2, "kanin": 1, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 1}
         }
     },
     {
         "question": "Vill du ha en lugn och fridfull miljö för det mesta?",
-        "answers": {
-            "Ja": {"Katt": 1, "Hund": 0, "Kanin": 2, "Fisk": 2},
-            "Nej": {"Katt": 1, "Hund": 2, "Kanin": 1, "Fisk": 0}
+        "poäng": {
+            "Ja": {"katt": 1, "hund": 0, "kanin": 2, "fisk": 2},
+            "Nej": {"katt": 1, "hund": 2, "kanin": 1, "fisk": 0}
         }
     },
     {
         "question": "Är du beredd att ta hand om och underhålla ett akvarium?",
-        "answers": {
-            "Ja": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 2},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 1}
+        "poäng": {
+            "Ja": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 2},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 1}
         }
     },
     {
         "question": "Föredrar du ett husdjur som är lättskött?",
-        "answers": {
-            "Ja": {"Katt": 2, "Hund": 1, "Kanin": 2, "Fisk": 2},
-            "Nej": {"Katt": 0, "Hund": 1, "Kanin": 0, "Fisk": 0}
+        "poäng": {
+            "Ja": {"katt": 2, "hund": 1, "kanin": 2, "fisk": 2},
+            "Nej": {"katt": 0, "hund": 1, "kanin": 0, "fisk": 0}
         }
     },
     {
         "question": "Har du tid och intresse för att träna och uppfostra ett husdjur?",
-        "answers": {
-            "Ja": {"Katt": 1, "Hund": 2, "Kanin": 0, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 1, "Fisk": 0}
+        "poäng": {
+            "Ja": {"katt": 1, "hund": 2, "kanin": 1, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 1, "fisk": 0}
         }
     },
     {
         "question": "Föredrar du ett husdjur som kan vara självständigt?",
-        "answers": {
-            "Ja": {"Katt": 2, "Hund": 1, "Kanin": 2, "Fisk": 2},
-            "Nej": {"Katt": 0, "Hund": 1, "Kanin": 0, "Fisk": 0}
+        "poäng": {
+            "Ja": {"katt": 2, "hund": 1, "kanin": 2, "fisk": 2},
+            "Nej": {"katt": 0, "hund": 1, "kanin": 0, "fisk": 0}
         }
     },
     {
         "question": "Är du intresserad av att utforska träning och aktiviteter med ditt husdjur?",
-        "answers": {
-            "Ja": {"Katt": 0, "Hund": 2, "Kanin": 1, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 1}
+        "poäng": {
+            "Ja": {"katt": 1, "hund": 2, "kanin": 1, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 1}
         }
     },
     {
         "question": "Har du tid och lust att borsta ditt husdjurs päls regelbundet?",
-        "answers": {
-            "Ja": {"Katt": 2, "Hund": 2, "Kanin": 1, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 1}
+        "poäng": {
+            "Ja": {"katt": 2, "hund": 2, "kanin": 1, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 1}
         }
     },
     {
         "question": "Är du intresserad av att träna ditt husdjur att utföra tricks eller kommandon?",
-        "answers": {
-            "Ja": {"Katt": 0, "Hund": 2, "Kanin": 1, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 1}
+        "poäng": {
+            "Ja": {"katt": 1, "hund": 2, "kanin": 1, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 1}
         }
     },
     {
         "question": "Föredrar du ett husdjur som är lugnt och stillsamt?",
-        "answers": {
-            "Ja": {"Katt": 2, "Hund": 1, "Kanin": 2, "Fisk": 2},
-            "Nej": {"Katt": 0, "Hund": 1, "Kanin": 0, "Fisk": 0}
+        "poäng": {
+            "Ja": {"katt": 2, "hund": 1, "kanin": 2, "fisk": 2},
+            "Nej": {"katt": 0, "hund": 1, "kanin": 0, "fisk": 0}
         }
     },
     {
         "question": "Har du tid och lust att leka och interagera med ditt husdjur dagligen?",
-        "answers": {
-            "Ja": {"Katt": 1, "Hund": 2, "Kanin": 2, "Fisk": 0},
-            "Nej": {"Katt": 0, "Hund": 0, "Kanin": 0, "Fisk": 1}
+        "poäng": {
+            "Ja": {"katt": 1, "hund": 2, "kanin": 2, "fisk": 0},
+            "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 1}
         }
     }
 ]

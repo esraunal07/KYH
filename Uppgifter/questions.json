@@ -2,7 +2,9 @@
     "Frågeformulär" : [
         {
             "fråga" : "Vill du motionera mycket med ditt husdjur?" ,
-            "svar"  :["ja", "nej"]
+            "svar" :["ja", "nej"]
+            
+
         },
         {
             "fråga" : "Bor du i ett stort hus?" ,

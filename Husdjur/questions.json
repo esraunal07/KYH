@@ -10,7 +10,7 @@
     {
         "question": "Vill du motionera mycket med ditt husdjur?",
         "poäng": {
-            "Ja": {"katt": 1, "hund": 2, "kanin": 1, "fisk": 0},
+            "Ja": {"katt": 2, "hund": 2, "kanin": 1, "fisk": 0},
             "Nej": {"katt": 0, "hund": 0, "kanin": 0, "fisk": 2}
         }
     },
@@ -18,13 +18,13 @@
         "question": "Har du tid och lust att gå ut med ditt husdjur flera gånger om dagen?",
         "poäng": {
             "Ja": {"katt": 0, "hund": 2, "kanin": 0, "fisk": 0},
-            "Nej": {"katt": 0, "hund": 0, "kanin": 1, "fisk": 2}
+            "Nej": {"katt": 1, "hund": 0, "kanin": 1, "fisk": 2}
         }
     },
     {
         "question": "Föredrar du ett tyst husdjur?",
         "poäng": {
-            "Ja": {"katt": 2, "hund": 1, "kanin": 2, "fisk": 2},
+            "Ja": {"katt": 2, "hund": 0, "kanin": 2, "fisk": 2},
             "Nej": {"katt": 0, "hund": 1, "kanin": 0, "fisk": 0}
         }
     },

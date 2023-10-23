@@ -1,17 +1,19 @@
 import PromptSync from "prompt-sync";
 import Musician from "./musiker.js";
 import Band from "./band.js";
+import fs from "fs" ;
 
 const prompt = PromptSync({sigint:true});
 
 const musicians = [];
 const bands = [];
 
+const userData = { responses: [] };
+
 
 let run = true;
 while (run) {
     console.log(`
-
     Meny
     1. lägg till en ny band
     2. ta bort grupp
@@ -33,7 +35,7 @@ while (run) {
             bands.push(newBand);
             console.log(`Bandet "${bandName}" har lagts till.`);
             break;
-        
+
         case "2" :
             console.log("Tillgängliga band:");
             bands.forEach((band, index) => {
@@ -102,6 +104,12 @@ while (run) {
         default:
         console.log("Ogiltigt val. Vänligen välj en giltig åtgärd (1-6).");
         }
-    
-    }
-    
+
+
+     
+    userData.responses.push({ choice: val.trim().toUpperCase() });
+    fs.writeFileSync('Data.json', JSON.stringify(userData, null, 2));
+}
+
+
+  

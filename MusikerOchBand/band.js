@@ -1,10 +1,11 @@
 import fs from "fs";
 import Musician from "./musiker.js";
 
+
 export default class Band {
   #allBands = [];
 
-  constructor(name, formationYear, dissolutionYear) {
+  constructor(name, formationYear, dissolutionYear = null) {
     this.name = name;
     this.formationYear = formationYear;
     this.dissolutionYear = dissolutionYear;
@@ -33,16 +34,8 @@ export default class Band {
 
   getMembers() {
     return {
-      currentMembers: this.currentMembers.map((entry) => ({
-        musician: entry.musician,
-        joinYear: entry.joinYear,
-        instruments: entry.instruments,
-      })),
-      previousMembers: this.previousMembers.map((entry) => ({
-        musician: entry.musician,
-        leaveYear: entry.leaveYear,
-        instruments: entry.instruments,
-      })),
+      currentMembers: this.currentMembers,
+      previousMembers: this.previousMembers,
     };
   }
 
@@ -54,3 +47,10 @@ export default class Band {
     return this.dissolutionYear;
   }
 }
+
+
+
+//const jsonData = JSON.stringify({ allBands: bands }, null, 2);
+
+
+

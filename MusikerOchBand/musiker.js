@@ -2,8 +2,8 @@
 export default class Musician {
   #name
   #birthYear
-  
-  constructor(name, birthYear) {
+  #instruments
+  constructor(name, birthYear, instruments) {
     this.name = name;
     this.birthYear = birthYear;
     this.currentBands = [];

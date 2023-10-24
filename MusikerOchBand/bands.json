@@ -1,0 +1,39 @@
+{
+  "allBands": [
+    {
+      "name": "Evanescence",
+      "formationYear": 2000,
+      "dissolutionYear": 2010,
+      "currentMembers": [],
+      "previousMembers": []
+    },
+    {
+      "name": "The Beatles",
+      "formationYear": 2015,
+      "dissolutionYear": null,
+      "currentMembers": [],
+      "previousMembers": []
+    },
+    {
+      "name": "ABBA",
+      "formationYear": 1980,
+      "dissolutionYear": null,
+      "currentMembers": [],
+      "previousMembers": []
+    },
+    {
+      "name": "Ayna",
+      "formationYear": 1995,
+      "dissolutionYear": null,
+      "currentMembers": [],
+      "previousMembers": []
+    },
+    {
+      "name": "Athena",
+      "formationYear": 2012,
+      "dissolutionYear": null,
+      "currentMembers": [],
+      "previousMembers": []
+    }
+  ]
+}

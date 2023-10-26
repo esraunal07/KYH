@@ -8,8 +8,14 @@ const prompt = PromptSync({sigint:true});
 const musicians = [];
 const bands = [];
 
-const userData = { responses: [] };
 
+let userData ;
+try{
+  const data =fs.readFileSync("./Data.json");
+  userData=JSON.parse(data)
+}catch (error){
+  userData ={ responses: []} ;
+}
 
 let run = true;
 while (run) {
@@ -28,7 +34,7 @@ while (run) {
         case "1" :
             let bandName =prompt("Vad heter din nya grupp?") ;
             let formationYear = prompt("Årtal bandet bildades?");
-            //let dissolutionYear = prompt("Årtal bandet upplöstes? (Lämna tomt om bandet fortfarande existerar)");
+            let dissolutionYear = prompt("Årtal bandet upplöstes? (Lämna tomt om bandet fortfarande existerar)");
             const newBand = new Band(bandName, formationYear);
             bands.push(newBand);
             console.log(`Bandet "${bandName}" har lagts till.`);

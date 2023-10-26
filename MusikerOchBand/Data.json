@@ -1,16 +1,22 @@
 {
   "responses": [
     {
+      "choice": "1"
+    },
+    {
       "choice": "2"
+    },
+    {
+      "choice": "1"
     },
     {
       "choice": "3"
     },
     {
-      "choice": "4'"
+      "choice": "1"
     },
     {
-      "choice": "4"
+      "choice": "6"
     }
   ]
 }

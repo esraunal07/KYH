@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Agbalumo&family=Noto+Sans:wght@100&family=Poiret+One&family=Spirax&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+ background-color: darkred;
+ font-family: Poiret One;
+}
+
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  padding: 1vh 0;
+  background-color: rgba(50, 7, 68, 0.6);
+  display: flex;
+  justify-content: center;
+}
+
+nav > a {
+  font-family: Spirax;
+  margin: 0 5vw;
+  font-size: 5vh;
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  font-family: Spirax;
+  font-size: 10vh;
+  color: rgb(138, 0, 0);
+  text-align: center;
+}
+
+section {
+  background-size: cover;
+  background-position: center;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  margin-bottom: 2vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section > :nth-child(2){
+  align-self: flex-start;
+}
+
+section > :nth-child(3){
+  align-self: flex-end;
+}
+
+section > :nth-child(4){
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#row {
+  display: flex;
+  justify-content: space-between;
+}
+
+p {
+  font-size: 2.5vh;
+  padding: 20px;
+  width: 80%;
+  color: white;
+  background-color: rgba(138, 0, 0, 0.8);
+  text-align: center;
+}
+
+
+
+
+
+#hot {
+  background-image: url(https://pvt23-kyh.lms.nodehill.se/wp-content/uploads/2018/09/hot.jpg);
+}
+
+#juicy {
+  background-image: url(https://pvt23-kyh.lms.nodehill.se/wp-content/uploads/2018/09/juicy.jpg);
+}
+
+#cosy {
+  background-image: url(https://pvt23-kyh.lms.nodehill.se/wp-content/uploads/2018/09/cosy.jpg);
+  margin: 0;
+}
+
+
+@media screen and (max-width: 500px){
+  nav > a {
+    font-size: 3vh;
+  }
+
+  section > :nth-child(2){
+    align-self: center;
+  }
+
+  section > :nth-child(3){
+    display: none;
+  }
+}

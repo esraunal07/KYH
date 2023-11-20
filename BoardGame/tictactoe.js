@@ -80,6 +80,7 @@ function checkCellEmpty(cell) {
 function endGame() {
   winningMessageTextElement.innerText = `${whoTurn ? playerOName : playerXName} Wins!`;
   showSelectedPlayers();
+  
   matchHistoryData.push({
     winner: whoTurn ? playerOName : playerXName,
     opponent: whoTurn ? playerXName : playerOName,
@@ -87,9 +88,11 @@ function endGame() {
     result: whoTurn ? "O Wins" : "X Wins" 
   });
 
+  matchHistoryData = matchHistoryData.slice(-10);
+
+
   localStorage.setItem('matchHistoryData', JSON.stringify(matchHistoryData));
 }
-
 function showSelectedPlayers() {
   const selectedPlayersDiv = document.getElementById('selectedPlayers');
   selectedPlayersDiv.innerHTML = `<p>${playerXName} vs ${playerOName}</p>`;

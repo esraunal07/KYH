@@ -1,14 +1,14 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const matchHistory = document.getElementById('matchHistory');
-  const selectedPlayersDiv = document.getElementById('selectedPlayers');
-  const storedMatchHistoryData = localStorage.getItem('matchHistoryData');
-  const matchHistoryData = storedMatchHistoryData ? JSON.parse(storedMatchHistoryData) : [];
+  document.addEventListener('DOMContentLoaded', function () {
+  const matchHistoryBody = document.getElementById('matchHistoryBody');
 
-  console.log("Match History Data:", storedMatchHistoryData);
+  let matchHistoryDataRaw = localStorage.getItem('matchHistoryData');
+  
+  if (matchHistoryDataRaw === null || matchHistoryDataRaw === undefined) {
+    
+    matchHistoryDataRaw = '[]';
+  }
 
-  const playerXName = localStorage.getItem('playerXName') || 'DefaultPlayer1';
-  const playerOName = localStorage.getItem('playerOName') || 'DefaultPlayer2';
-  selectedPlayersDiv.innerHTML = `<p>${playerXName} vs ${playerOName}</p>`;
+  let matchHistoryData;
 
   matchHistoryData.forEach((match) => {
     const newRow = document.createElement('tr');
@@ -27,6 +27,8 @@ document.addEventListener('DOMContentLoaded', function () {
     newRow.appendChild(roundCountCell);
     newRow.appendChild(resultCell);
 
-    matchHistory.appendChild(newRow);
+    matchHistoryBody.appendChild(newRow);
   });
 });
+
+

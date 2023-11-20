@@ -1,0 +1,57 @@
+
+<!--<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>start meny</title>
+  <link rel="stylesheet" href="newPlayers.css">
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to gaming! Are you ready?</h1>
+  </header>
+  <div class="register-form" id="register-form">
+    <h3>Register new player</h3>
+    <form>
+      <input type="text" id="player-name" placeholder="Name" required />
+      <button id="register">Register</button>
+    </form>
+  </div>
+  <hr>
+  <div>
+    <button class="player-list" id="player-list">View player</button>
+  </div>
+  <script src="newPlayers.js" type="module"></script>
+</body>
+
+</html>
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Players</title>
+  <link rel="stylesheet" href="newPlayers.css">
+</head>
+
+<body>
+  <h1>New Players</h1>
+  <label for="playerName">Enter Player Name:</label>
+  <input type="text" id="playerName" />
+  <button onclick="addPlayer()">Add Player</button>
+  <p id="savedMessage"></p>
+    <h2>Player List</h2>
+    <ul id="playerList"></ul>
+  <button id="startGameButton" onclick="startGame()" style="display: none;">Start Game</button>
+
+  <script src="newPlayers.js"></script>
+</body>
+
+</html>

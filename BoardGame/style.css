@@ -1,84 +1,10 @@
-/*
-*{
-    box-sizing: border-box;
-  }
-  
-  body {
-   background-color: darkred;
-   font-family: Poiret One;
-  }
-  
-  nav {
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    padding: 1vh 0;
-    background-color: rgba(50, 7, 68, 0.6);
-    display: flex;
-    justify-content: center;
-  }
-  
-  nav > a {
-    font-family: Spirax;
-    margin: 0 5vw;
-    font-size: 5vh;
-    color: white;
-    text-decoration: none;
-  }
-  
-  h1 {
-    font-family: Spirax;
-    font-size: 10vh;
-    color: rgb(138, 0, 0);
-    text-align: center;
-  }
-  
-  section {
-    background-size: cover;
-    background-position: center;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    margin-bottom: 2vh;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  section > :nth-child(2){
-    align-self: flex-start;
-  }
-  
-  section > :nth-child(3){
-    align-self: flex-end;
-  }
-  
-  section > :nth-child(4){
-    background-color: rgba(0, 0, 0, 0.8);
-  }
-  
-  #row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  p {
-    font-size: 2.5vh;
-    padding: 20px;
-    width: 80%;
-    color: white;
-    background-color: rgba(138, 0, 0, 0.8);
-    text-align: center;
-  }
-  */
-  
+
   * {
     box-sizing: border-box;
   }
   
   body {
-    background-color: darkred;
+    background-color: rgb(174, 104, 104);
     font-family: 'Poiret One', sans-serif;
   }
   
@@ -105,5 +31,11 @@
     font-size: 10vh;
     color: rgb(39, 36, 36);
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0; 
   }
+  
   

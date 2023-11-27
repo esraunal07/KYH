@@ -1,10 +1,10 @@
 export default class EventTicket {
-    constructor(id, eventName, prize, eventTime, buyerId) {
-      this.id = id;
-      this.eventName = eventName;
-      this.prize = prize;
-      this.eventTime = eventTime;
-      this.buyerId = buyerId;
-    }
+  constructor(id, eventName, price, eventTime, buyerId) {
+    this.id = id;
+    this.eventName = eventName;
+    this.price = price;
+    this.eventTime = eventTime;
+    this.buyerId = buyerId;
   }
-  
+}
+

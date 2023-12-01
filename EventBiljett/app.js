@@ -10,15 +10,11 @@ class TicketApp {
     this.users = [];
     this.tickets = [];
 
-    // Program başlatıldığında JSON dosyalarını kontrol et
     this.loadFromFiles();
-
-    // Ana menüyü göster
     this.showMainMenu();
   }
 
   loadFromFiles() {
-    // Kullanıcıları ve etkinlik biletlerini JSON dosyalarından yükle
     try {
       const usersData = fs.readFileSync('usersData.json', 'utf8');
       this.users = JSON.parse(usersData).map(userData => new User(userData.username, userData.password, userData.email, userData.id, userData.tickets));
@@ -26,26 +22,25 @@ class TicketApp {
       const ticketsData = fs.readFileSync('ticketsData.json', 'utf8');
       this.tickets = JSON.parse(ticketsData).map(ticketData => new EventTicket(ticketData.eventName, ticketData.availableTickets));
     } catch (error) {
-      // Hata durumunda dosyaları oluştur
       this.saveToFiles();
     }
   }
 
   saveToFiles() {
-    // Kullanıcıları ve etkinlik biletlerini JSON dosyalarına kaydet
+    
     fs.writeFileSync('usersData.json', JSON.stringify(this.users), 'utf8');
     fs.writeFileSync('ticketsData.json', JSON.stringify(this.tickets), 'utf8');
   }
 
   showMainMenu() {
-    console.log('Hoş geldiniz! Lütfen bir seçenek seçin:');
-    console.log('1. Yeni Hesap Oluştur');
-    console.log('2. Alıcı Girişi');
-    console.log('3. Yönetici Girişi');
-    console.log('4. Çıkış');
+    console.log('Welcome! Please choose an option:');
+    console.log('1. Create New Account');
+    console.log('2. Buyer Login');
+    console.log('3. Admin Login');
+    console.log('4. Checkout');
   
-    const choice = parseInt(prompt('Seçeneğinizi girin (1-4): '), 10);
-    console.log(`Seçilen sayı: ${choice}`); // Kullanıcının girdiği sayıyı ekrana yazdır
+    const choice = parseInt(prompt('Enter your choice(1-4): '), 10);
+    console.log(`Your choice: ${choice}`); 
   
     switch (choice) {
       case 1:
@@ -59,119 +54,164 @@ class TicketApp {
         this.adminLogin();
         break;
       case 4:
-        console.log('Çıkılıyor...');
+        console.log('Check outing...');
         break;
       default:
-        console.log('Geçersiz seçenek. Tekrar deneyin.');
+        console.log('Invalid option. Try again.');
         this.showMainMenu();
     }
   }
   
   createAccount() {
-    // Yeni kullanıcı hesabı oluştur
-    const username = prompt('Kullanıcı adınızı girin: ');
-    const password = prompt('Şifrenizi girin: ');
-    const email = prompt('Mailinizi girin: ');
-    const id = prompt('id numaranizi girin: ')
+    const username = prompt('Enter username: ');
+    const password = prompt('Enter password: ');
+    const email = prompt('Enter email: ');
+    const id = prompt('Enter ID: ');
+    const phone=prompt('Telephone: ');
 
     const newUser = new User(username, password, email, id);
     this.users.push(newUser);
-    console.log('Yeni hesap oluşturuldu!');
+    console.log('New account created!');
     this.saveToFiles();
     this.showMainMenu();
   }
 
   userLogin() {
-    const username = prompt('Kullanıcı adınızı girin: ');
-    const password = prompt('Şifrenizi girin: ');
+    const username = prompt('Enter username: ');
+    const password = prompt('Enter password: ');
   
     const user = this.users.find(u => u.username === username && u.password === password);
     if (user) {
-      console.log('Giriş başarılı. Hoş geldiniz, ' + user.username + '!');
+      console.log('Login successful. Welcome, ' + user.username + '!');
       this.showMainMenu(user);
     } else {
-      console.log('Hatalı kullanıcı adı veya şifre. Tekrar deneyin.');
-      console.log('Kayıtlı Kullanıcılar:', this.users);
+      console.log('Wrong username or password. Try again!');
+      console.log('Registered Users:', this.users);
       this.showMainMenu();
     }
   }
   
   showMainMenu(user) {
     if (user) {
-      console.log(`Hoş geldiniz, ${user.username}!`);
-      const choice = prompt('Lütfen bir seçenek seçin: (1) Bilet Satın Al, (2) Çıkış\n');
+      console.log(`Welcome, ${user.username}!`);
+      const choice = prompt('Please select an option: (1) Buy Ticket,  (2) Add New Event, (3) Check Out\n');
   
       switch (choice) {
         case '1':
           this.buyTicket(user);
-          this.showMainMenu(user); // Bilet satın alındıktan sonra menüyü tekrar göster
+          this.showMainMenu(user); 
           break;
         case '2':
-          console.log('Çıkılıyor...');
+          this.addNewEvent(user);
+          this.showMainMenu(user);
+          break; 
+        case '3':
+          console.log('Checking out...');
           break;
         default:
-          console.log('Geçersiz seçenek. Tekrar deneyin.');
+          console.log('Invalid option. Try again!');
           this.showMainMenu(user);
       }
-    }
-  }
-  /*  } else {
-      console.log('Ana menü: (1) Yeni Kullanıcı Oluştur, (2) Giriş Yap, (3) Çıkış');
-      const choice = prompt('Lütfen bir seçenek seçin: ');
+     } else {
+      console.log('Welcome! Please choose an option:');
+      console.log('1. Create New Account');
+      console.log('2. Buyer Login');
+      console.log('3. Admin Login');
+      console.log('4. Checkout');
   
-      switch (choice) {
-        case '1':
-          this.createAccount();
-          this.showMainMenu();
-          break;
-        case '2':
-          this.userLogin();
-          break;
-        case '3':
-          console.log('Çıkılıyor...');
-          break;
-        default:
-          console.log('Geçersiz seçenek. Tekrar deneyin.');
-          this.showMainMenu();
-      }
+    const choice = parseInt(prompt('Enter your choice (1-4): '), 10);
+    console.log(`Your choice: ${choice}`); 
+  
+    switch (choice) {
+      case 1:
+        this.createAccount();
+        this.showMainMenu();
+        break;
+      case 2:
+        this.userLogin();
+        break;
+      case 3:
+        this.adminLogin();
+        break;
+      case 4:
+        console.log('Exiting...');
+        break;
+      default:
+        console.log('Invalid option. Try again!.');
+        this.showMainMenu();
     }
-  }
-  */
+      
+     }
+    }
+    addNewEvent(user) {
+      console.log('Enter details for the new event:');
+      const eventName = prompt('Event Name: ');
+      const eventDate = prompt('Event Date: ');
+    
+      if (!user.hasOwnProperty('events')) {
+        user.tickets = [];
+      }
+      const newEvent = { name: eventName, date: eventDate };
+      user.tickets.push(newEvent);
+      this.saveUserData(user);
+    
+      console.log('New event added successfully!');
+    }
+    saveUserData(user) {
+      const userDataPath = 'ticketsData.json';
+      let ticketData = {};
+      try {
+        const data = fs.readFileSync(userDataPath, 'utf8');
+        ticketData = JSON.parse(data);
+      } catch (err) {
+        ticketData = {};
+      }
+      if (user && user.username) {
+        if (!ticketData[user.username]) {
+          ticketData[user.username] = { events: [] };
+        }
+        ticketData[user.username].events.push(...user.events);
+      }
+  
+      fs.writeFileSync(userDataPath, JSON.stringify(ticketData, null, 2));
+    }
+    
+   
   buyTicket(user) {
-    const eventName = prompt('Etkinlik adını girin: ');
-    const quantity = parseInt(prompt('Kaç adet bilet satın almak istiyorsunuz: '), 10);
+    this.showEventTickets();
+    const eventName = prompt('Enter the event name: ');
+    const quantity = parseInt(prompt('How many tickets do you want to buy: '), 10);
 
     const event = this.tickets.find(ticket => ticket.eventName === eventName);
     if (event && event.availableTickets >= quantity) {
-      user.buyTicket(event, quantity); // buyTicket fonksiyonunu güncelledim
+      this.tickets;
+      user.buyTicket(event, quantity);
       event.availableTickets -= quantity;
       this.saveToFiles();
     } else {
-      console.log('Belirtilen etkinlik bulunamadı veya yeterli bilet yok. Tekrar deneyin.');
+      console.log('The specified event could not be found or there are not enough tickets. Try again!');
     }
     this.showMainMenu(user);
   }
 
-  adminLogin() {
-    const adminUsername = prompt('Yönetici kullanıcı adınızı girin: ');
-    const adminPassword = prompt('Yönetici şifrenizi girin: ');
 
-    // Yönetici doğrulama işlemleri (gerçek bir sistemde daha sofistike bir yöntem kullanılmalıdır)
+  adminLogin() {
+    const adminUsername = prompt('Admin UserName: ');
+    const adminPassword = prompt('Admin Password: ');
 
     if (adminUsername === 'admin' && adminPassword === 'admin123') {
-      // Doğrulama başarılı
-      console.log('Yönetici girişi başarılı!');
+
+      console.log('Admin login successful!');
       this.showAdminMenu();
     } else {
-      // Doğrulama başarısız
-      console.log('Hatalı yönetici kullanıcı adı veya şifre. Tekrar deneyin.');
+      console.log('Incorrect admin username or password. Try again!');
       this.showMainMenu();
     }
   }
 
   showAdminMenu() {
-    console.log('--- Admin Menüsü ---');
-    const adminChoice = prompt('Yönetici Menüsü: Lütfen bir seçenek seçin: (1) Kullanıcıları Görüntüle, (2) Etkinlik Biletlerini Görüntüle, (3) Çıkış\n');
+    console.log('--- Admin Menu ---');
+    const adminChoice = prompt('Admin Page: Please select an option: (1) View Users, (2) View Event Tickets, (3) Exit\n');
 
     switch (adminChoice) {
       case '1':
@@ -181,35 +221,36 @@ class TicketApp {
         this.showEventTickets();
         break;
       case '3':
-        console.log('Çıkılıyor...');
+        console.log('Exiting...');
         break;
       default:
-        console.log('Geçersiz seçenek. Tekrar deneyin.');
+        console.log('Invalid option. Try again!');
         this.showAdminMenu();
     }
   }
 
+
   showUsers() {
-    // Kullanıcıları göster
-    console.log('--- Kullanıcılar ---');
+    console.log('--- Users ---');
     this.users.forEach(user => {
-      console.log(`ID: ${user.id}, Kullanıcı Adı: ${user.username}, Email: ${user.email}, Telefon: ${user.phone}`);
+      console.log(`ID: ${user.id}, User Name: ${user.username}, Email: ${user.email}, Telefon: ${user.phone}`);
     });
     console.log('---------------------');
     this.showAdminMenu();
   }
 
   showEventTickets() {
-    // Etkinlik biletlerini göster
-    console.log('--- Etkinlik Biletleri ---');
-    this.tickets.forEach(ticket => {
-      console.log(`ID: ${ticket.id}, Etkinlik Adı: ${ticket.eventName}, Fiyat: ${ticket.price}, Zaman: ${ticket.eventTime}, Alıcı ID: ${ticket.buyerId}`);
+    console.log('--- Event Ticket ---');
+    this.tickets.forEach(tickets => {
+      console.log(`ID: ${tickets.id}, Event Name: ${tickets.eventName}, Prise: ${tickets.price}, Time: ${tickets.eventTime}, Coordinator ID: ${tickets.coordinatorId}, Stok: ${tickets.availableTickets}`);
+    
     });
-    console.log('--------------------------');
-    this.showAdminMenu();
+    //console.log('--');
+   // this.showAdminMenu();
   }
-    }
-  
+}
+    
+
 const app = new TicketApp();
 
   

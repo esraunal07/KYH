@@ -1,15 +1,15 @@
   export default class EventTicket {
-    constructor(id, eventName, price, eventTime, coordinatorId, availableTickets) {
-      this.id = id;
+    constructor(eventId, eventName, price, eventTime, buyerId) {
+      this.eventId = eventId;
       this.eventName = eventName;
-      this.price = parseFloat(price.replace('$', '')); 
+      this.price = price; 
       this.eventTime = eventTime;
-      this.coordinatorId = coordinatorId;
-      this.availableTickets = parseInt(availableTickets, 10);
+      this.buyerId = buyerId;
+  
     }
   
     displayInfo() {
-      console.log(`ID: ${this.id}, Event: ${this.eventName}, Price: ${this.price}, Time: ${this.eventTime}, Coordinator ID: ${this.coordinatorId}, Available Tickets: ${this.availableTickets}`);
+      console.log(`ID: ${this.eventId}, Event: ${this.eventName}, Price: ${this.price}, Time: ${this.eventTime}, Buyer ID: ${this.buyerId}`);
     }
   }
   

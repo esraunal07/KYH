@@ -73,7 +73,7 @@ class TicketApp {
     const id = prompt('Enter ID: ');
     const phone=prompt('Telephone: ');
 
-    const newUser = new User(username, password, email, id);
+    const newUser = new User(username, password, email, id, phone);
     this.users.push(newUser);
     console.log('New account created!');
     this.saveToFiles();
@@ -188,22 +188,22 @@ class TicketApp {
       fs.writeFileSync(userDataPath, JSON.stringify(ticketData, null, 2));
     }
     buyTicket(user) {
+
       this.showEventTickets();
       const eventName = prompt('Enter the event name: ');
-      const buyerId = prompt('Enter your BuyerID: '); 
-    
+      //const buyerId = prompt('Enter your BuyerID: '); 
       const event = this.tickets.find(ticket => ticket.eventName.trim().toLowerCase() === eventName.trim().toLowerCase());
-    
+  
       if (event) {
-        user.buyTicket(event, buyerId);
+       // user.buyTicket(event);
         this.saveToFiles();
         console.log(`Ticket purchased for ${event.eventName}`);
       } else {
         console.log('The specified event could not be found. Try again!');
       }
-    
-      this.showMainMenu(user);
+       this.showMainMenu(user);
     }
+    
     
 
   adminLogin() {

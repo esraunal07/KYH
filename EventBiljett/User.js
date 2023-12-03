@@ -13,6 +13,7 @@ export default class User {
     this.email = email;
     this.phone = phone;
     this.tickets = [];
-  } 
   
+
+}
 }

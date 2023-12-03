@@ -1,14 +1,14 @@
 [
   {
     "eventId": 1,
-    "eventName": "Konser",
+    "eventName": "Consert",
     "price": 50,
     "eventTime": "12-12-2023",
     "buyerId" :101
   },
   {
     "eventId": 2,
-    "eventName": "Tiyatro",
+    "eventName": "Teather",
     "price": 35,
     "eventTime": "25-12-2023",
     "buyerId" :102
